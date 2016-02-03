@@ -1,0 +1,37 @@
+"use strict";
+
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 250
+};
+
+var totalSal = 0;
+for (empl in salaries) {
+  totalSal += salaries[empl];
+};
+
+var maxSal = 0, maxName = '';
+for (empl in salaries) {
+  if (maxSal < salaries[empl]) {
+  maxSal = salaries[empl];
+  maxName = empl;
+  };
+};
+
+function isNumeric(n) {
+  return !isNaN(parsFloat(n)) && isFinite(n);
+};
+function multiplyNumeric(obj) {
+  for (var key in obj) {
+    if (isNumeric(obj[key])) {
+      obj[key] *= 2;
+    };
+  };
+};
+
+var arr = [];
+while(true) {
+  arr[arr.length] = prompt('', 0);
+  
+}
